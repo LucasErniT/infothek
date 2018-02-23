@@ -11,7 +11,7 @@
 							<CustomListItem>
 								<Panel expand="showFAQ" expandable="true" expanded="false" headerText="{CUST_NAME}">
 									<content>
-										<t:Table id="table" selectionMode="None" rows="{Projects}" enableCellFilter="{ui>/cellFilterOn}">
+										<t:Table id="table" enableBusyIndicator="true" selectionMode="None" rows="{Projects}" enableCellFilter="{ui>/cellFilterOn}">
 											<t:columns>
 												<t:Column width="4rem">
 													<Text/>
@@ -26,9 +26,321 @@
 													</t:template>
 												</t:Column>
 												<t:Column width="11rem">
-													<Text text="User Name"/>
+													<Text text="Time Stamp"/>
+													<t:template>
+														<Input value="{TIME_STAMP}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11rem">
+													<Text text="Start Datum"/>
+													<t:template>
+														<Input value="{START_DATE}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11rem">
+													<Text text="End Datum"/>
+													<t:template>
+														<Input value="{END_DATE}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11rem">
+													<Text text="Kundennummer"/>
+													<t:template>
+														<Input value="{CUST_ID}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11rem">
+													<Text text="USER NAME"/>
 													<t:template>
 														<Input value="{USER_NAME}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11rem">
+													<Text text="Projekt Titel"/>
+													<t:template>
+														<Input value="{PROJ_TOPIC}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11rem">
+													<Text text="STATUS"/>
+													<t:template>
+														<Input value="{STATUS}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11rem">
+													<Text text="PROJ_LOC"/>
+													<t:template>
+														<Input value="{PROJ_LOC}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11rem">
+													<Text text="PROJ_COUNTRY"/>
+													<t:template>
+														<Input value="{PROJ_COUNTRY}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11rem">
+													<Text text="Personen Tage"/>
+													<t:template>
+														<Input value="{PERS_DAYS}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11rem">
+													<Text text="DAY_RATE_EUR"/>
+													<t:template>
+														<Input value="{DAY_RATE_EUR}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11rem">
+													<Text text="REV_POT_EUR"/>
+													<t:template>
+														<Input value="{REV_POT_EUR}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PROBABILITY"/>
+													<t:template>
+														<Input value="{PROBABILITY}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="REV_CALC_EUR"/>
+													<t:template>
+														<Input value="{REV_CALC_EUR}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="LIFECYCLE_PHASE"/>
+													<t:template>
+														<Input value="{LIFECYCLE_PHASE}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="SUPPLY_CHAIN"/>
+													<t:template>
+														<Input value="{SUPPLY_CHAIN}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="APPROVAL_DATE"/>
+													<t:template>
+														<Input value="{APPROVAL_DATE}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="APPROVAL_COMMENT"/>
+													<t:template>
+														<Input value="{APPROVAL_COMMENT}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="LEAD"/>
+													<t:template>
+														<Input value="{LEAD}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="OWNER"/>
+													<t:template>
+														<Input value="{OWNER}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="MARKETDEVELOPER"/>
+													<t:template>
+														<Input value="{MARKETDEVELOPER}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PROJ_TOPIC_BL"/>
+													<t:template>
+														<Input value="{PROJ_TOPIC_BL}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="INDUSTRY"/>
+													<t:template>
+														<Input value="{INDUSTRY}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="DURATION"/>
+													<t:template>
+														<Input value="{DURATION}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="ATP_DECISION"/>
+													<t:template>
+														<Input value="{ATP_DECISION}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="CONTACT_SOURCE"/>
+													<t:template>
+														<Input value="{CONTACT_SOURCE}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="CAS_STATUS"/>
+													<t:template>
+														<Input value="{CAS_STATUS}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="OFFERING_ID"/>
+													<t:template>
+														<Input value="{OFFERING_ID}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_PROJ_PARTNER"/>
+													<t:template>
+														<Input value="{PR_PROJ_PARTNER}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_PROJ_LEAD"/>
+													<t:template>
+														<Input value="{PR_PROJ_LEAD}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_EXTERN"/>
+													<t:template>
+														<Input value="{PR_EXTERN}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_PROJ_MEMBER"/>
+													<t:template>
+														<Input value="{PR_PROJ_MEMBER}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_KNOWLEDGE_MANAGER"/>
+													<t:template>
+														<Input value="{PR_KNOWLEDGE_MANAGER}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_PROJ_PACKET"/>
+													<t:template>
+														<Input value="{PR_PROJ_PACKET}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_STREET"/>
+													<t:template>
+														<Input value="{PR_STREET}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_PINCODE"/>
+													<t:template>
+														<Input value="{PR_PINCODE}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_CITY"/>
+													<t:template>
+														<Input value="{PR_CITY}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_PSP_ELEMENT"/>
+													<t:template>
+														<Input value="{PR_PSP_ELEMENT}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_PSP_DESC"/>
+													<t:template>
+														<Input value="{PR_PSP_DESC}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_BILLING_BY"/>
+													<t:template>
+														<Input value="{PR_BILLING_BY}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_RESP_BILLS_INCOMING"/>
+													<t:template>
+														<Input value="{PR_RESP_BILLS_INCOMING}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_RESP_BILLS_OUTGOING"/>
+													<t:template>
+														<Input value="{PR_RESP_BILLS_OUTGOING}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_RESP_TIME_CONTROLLING"/>
+													<t:template>
+														<Input value="{PR_RESP_TIME_CONTROLLING}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_ORDER_VOLUME"/>
+													<t:template>
+														<Input value="{PR_ORDER_VOLUME}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_TOTAL_VOLUME"/>
+													<t:template>
+														<Input value="{PR_TOTAL_VOLUME}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_PROJECT_TYPE"/>
+													<t:template>
+														<Input value="{PR_PROJECT_TYPE}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_ACCOUNTING_BY"/>
+													<t:template>
+														<Input value="{PR_ACCOUNTING_BY}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_CONTRACT_TYPE"/>
+													<t:template>
+														<Input value="{PR_CONTRACT_TYPE}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_RATES_DAY_OR_HOURS"/>
+													<t:template>
+														<Input value="{PR_RATES_DAY_OR_HOURS}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_OTHER_INFO"/>
+													<t:template>
+														<Input value="{PR_OTHER_INFO}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_DISCOLSE_CUSTOMERNAME"/>
+													<t:template>
+														<Input value="{PR_DISCOLSE_CUSTOMERNAME}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_SAP_ASSOCIATED"/>
+													<t:template>
+														<Input value="{PR_SAP_ASSOCIATED}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11em">
+													<Text text="PR_SAP_TECH_IMPL"/>
+													<t:template>
+														<Input value="{PR_SAP_TECH_IMPL}" valueLiveUpdate="true"/>
 													</t:template>
 												</t:Column>
 											</t:columns>
@@ -37,71 +349,7 @@
 								</Panel>
 							</CustomListItem>
 						</items>
-						<layoutData><l:SplitterLayoutData size="60%"/></layoutData>
 					</List>
-					<VBox >
-						<Button id="resizeButton" icon="sap-icon://expand" text="{i18n>increase}" press="expandDetailView"/>
-						<Panel class="sapUiResponsiveMargin sapUiHideOnPhone" width="auto" headerText="{i18n>offer}">
-							<f:SimpleForm id="simpleForm1" layout="ResponsiveGridLayout" maxContainerCols="2" editable="true" labelSpanXL="2" labelSpanL="2"
-								labelSpanM="2" labelSpanS="4" emptySpanL="0" emptySpanM="0" emptySpanXL="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1">
-								<f:content>
-									<Label text="{i18n>customer}"/>
-									<Input value="{USER_NAME}"/>
-									<Label text="{i18n>projectName}"/>
-									<Input value="{PROJ_TOPIC}"/>
-									<Label text="{i18n>status}"/>
-									<Input value="{STATUS}"/>
-								</f:content>
-							</f:SimpleForm>
-						</Panel>
-						<Panel class="sapUiResponsiveMargin sapUiHideOnPhone" width="auto" headerText="{i18n>details}">
-							<f:SimpleForm id="simpleForm2" layout="ResponsiveGridLayout" maxContainerCols="2" editable="true" labelSpanXL="2" labelSpanL="2"
-								labelSpanM="2" labelSpanS="4" emptySpanL="0" emptySpanM="0" emptySpanXL="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1">
-								<f:content>
-									<Label text="{i18n>customer}"/>
-									<Input value="{USER_NAME}"/>
-									<Label text="{i18n>projectName}"/>
-									<Input value="{PROJ_TOPIC}"/>
-									<Label text="{i18n>status}"/>
-									<Input value="{STATUS}"/>
-								</f:content>
-							</f:SimpleForm>
-						</Panel>
-						<Panel class="sapUiResponsiveMargin sapUiHideOnPhone" width="auto" headerText="{i18n>internal}">
-							<f:SimpleForm id="simpleForm3" layout="ResponsiveGridLayout" maxContainerCols="2" editable="true" labelSpanXL="2" labelSpanL="2"
-								labelSpanM="2" labelSpanS="4" emptySpanL="0" emptySpanM="0" emptySpanXL="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1">
-								<f:content>
-									<Label text="{i18n>customer}"/>
-									<Input value="{USER_NAME}"/>
-									<Label text="{i18n>projectName}"/>
-									<Input value="{PROJ_TOPIC}"/>
-									<Label text="{i18n>status}"/>
-									<Input value="{STATUS}"/>
-								</f:content>
-							</f:SimpleForm>
-						</Panel>
-						<Panel class="sapUiResponsiveMargin sapUiHideOnPhone" width="auto" headerText="{i18n>project}">
-							<f:SimpleForm id="simpleForm4" layout="ResponsiveGridLayout" maxContainerCols="2" editable="true" labelSpanXL="2" labelSpanL="2"
-								labelSpanM="2" labelSpanS="4" emptySpanL="0" emptySpanM="0" emptySpanXL="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1">
-								<f:content>
-									<Label text="{i18n>customer}"/>
-									<Input value="{USER_NAME}"/>
-									<Label text="{i18n>projectName}"/>
-									<Input value="{PROJ_TOPIC}"/>
-									<Label text="{i18n>status}"/>
-									<Input value="{STATUS}"/>
-								</f:content>
-							</f:SimpleForm>
-						</Panel>
-						<Panel class="sapUiResponsiveMargin sapUiHideOnPhone" width="auto" headerText="{i18n>mapTitle}">
-							<Image id="simpleForm6" height="50%" width="50%" src="{ parts: [ 'PR_STREET', 'PR_PINCODE', 'PR_CITY', 'PROJ_COUNTRY' ], formatter: '.formatter.formatMapUrl' }"/>
-						</Panel>
-						<Panel class="sapUiResponsiveMargin sapUiHideOnPhone" width="auto" headerText="Panel">
-							<Image src="https://memegenerator.net/img/instances/58306183/much-sap-very-performance-so-wow-no-go-live-march.jpg" width="400px"
-								height="400px" alt="Example picture of speakers"/>
-						</Panel>
-						<layoutData><l:SplitterLayoutData size="auto"/></layoutData>
-					</VBox>
 					<!--funktioniert-->
 					<!--<Carousel class="sapUiContentPadding" loop="true">
 						<pages>
