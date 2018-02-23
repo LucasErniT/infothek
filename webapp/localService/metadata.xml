@@ -1,0 +1,105 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+    <edmx:DataServices
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+        <Schema
+            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="q_perior.infothek_db.db.service.infothek">
+            <EntityType Name="TechnologiesType">
+                <Key>
+                    <PropertyRef Name="TECH_ID"/>
+                </Key>
+                <Property Name="TECH_ID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="TECH_LONG_NAME" Type="Edm.String" MaxLength="50"/>
+                <Property Name="TECH_SHORT_NAME" Type="Edm.String" MaxLength="7"/>
+                <Property Name="PARENT.TECH_ID" Type="Edm.Int64"/>
+            </EntityType>
+            <EntityType Name="CustomersType">
+                <Key>
+                    <PropertyRef Name="CUST_ID"/>
+                </Key>
+                <Property Name="CUST_ID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="CUST_NAME" Type="Edm.String" MaxLength="500"/>
+                <Property Name="CUST_CONTACTPERSON" Type="Edm.String" MaxLength="100"/>
+                <Property Name="CUST_ADDRESS_STREET" Type="Edm.String" MaxLength="100"/>
+                <Property Name="CUST_ADDRESS_CITY" Type="Edm.String" MaxLength="100"/>
+                <Property Name="CUST_ADDRESS_LAND" Type="Edm.String" MaxLength="100"/>
+                <Property Name="CUST_ADDRESS_ZIP" Type="Edm.String" MaxLength="10"/>
+                <NavigationProperty Name="Projects" Relationship="q_perior.infothek_db.db.service.infothek.CustomerProjectsType" FromRole="CustomersPrincipal" ToRole="ProjectsDependent"/>
+            </EntityType>
+            <EntityType Name="ProjectsType">
+                <Key>
+                    <PropertyRef Name="PROJ_ID"/>
+                </Key>
+                <Property Name="PROJ_ID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="TIME_STAMP" Type="Edm.DateTime" Nullable="false"/>
+                <Property Name="START_DATE" Type="Edm.DateTime"/>
+                <Property Name="END_DATE" Type="Edm.DateTime"/>
+                <Property Name="CUST_ID" Type="Edm.Int64"/>
+                <Property Name="USER_NAME" Type="Edm.String" MaxLength="50"/>
+                <Property Name="PROJ_TOPIC" Type="Edm.String" MaxLength="50"/>
+                <Property Name="STATUS" Type="Edm.String" MaxLength="50"/>
+                <Property Name="PROJ_LOC" Type="Edm.String" MaxLength="50"/>
+                <Property Name="PROJ_COUNTRY" Type="Edm.String" MaxLength="50"/>
+                <Property Name="PERS_DAYS" Type="Edm.Int32"/>
+                <Property Name="DAY_RATE_EUR" Type="Edm.Double"/>
+                <Property Name="REV_POT_EUR" Type="Edm.Double"/>
+                <Property Name="PROBABILITY" Type="Edm.Double"/>
+                <Property Name="REV_CALC_EUR" Type="Edm.Double"/>
+                <Property Name="LIFECYCLE_PHASE" Type="Edm.String" MaxLength="50"/>
+                <Property Name="SUPPLY_CHAIN" Type="Edm.String" MaxLength="2"/>
+                <Property Name="APPROVAL_DATE" Type="Edm.DateTime"/>
+                <Property Name="APPROVAL_COMMENT" Type="Edm.String" MaxLength="400"/>
+                <Property Name="LEAD" Type="Edm.String" MaxLength="100"/>
+                <Property Name="OWNER" Type="Edm.String" MaxLength="100"/>
+                <Property Name="MARKETDEVELOPER" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PROJ_TOPIC_BL" Type="Edm.String" MaxLength="100"/>
+                <Property Name="INDUSTRY" Type="Edm.String" MaxLength="100"/>
+                <Property Name="DURATION" Type="Edm.String" MaxLength="100"/>
+                <Property Name="ATP_DECISION" Type="Edm.String" MaxLength="100"/>
+                <Property Name="CONTACT_SOURCE" Type="Edm.String" MaxLength="100"/>
+                <Property Name="CAS_STATUS" Type="Edm.String" MaxLength="100"/>
+                <Property Name="OFFERING_ID" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PR_PROJ_PARTNER" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PR_PROJ_LEAD" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PR_EXTERN" Type="Edm.String" MaxLength="300"/>
+                <Property Name="PR_PROJ_MEMBER" Type="Edm.String" MaxLength="300"/>
+                <Property Name="PR_KNOWLEDGE_MANAGER" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PR_PROJ_PACKET" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PR_STREET" Type="Edm.String" MaxLength="50"/>
+                <Property Name="PR_PINCODE" Type="Edm.String" MaxLength="10"/>
+                <Property Name="PR_CITY" Type="Edm.String" MaxLength="50"/>
+                <Property Name="PR_PSP_ELEMENT" Type="Edm.String" MaxLength="10"/>
+                <Property Name="PR_PSP_DESC" Type="Edm.String" MaxLength="50"/>
+                <Property Name="PR_BILLING_BY" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PR_RESP_BILLS_INCOMING" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PR_RESP_BILLS_OUTGOING" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PR_RESP_TIME_CONTROLLING" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PR_ORDER_VOLUME" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PR_TOTAL_VOLUME" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PR_PROJECT_TYPE" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PR_ACCOUNTING_BY" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PR_CONTRACT_TYPE" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PR_RATES_DAY_OR_HOURS" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PR_OTHER_INFO" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PR_DISCOLSE_CUSTOMERNAME" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PR_SAP_ASSOCIATED" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PR_SAP_TECH_IMPL" Type="Edm.String" MaxLength="100"/>
+            </EntityType>
+            <Association Name="CustomerProjectsType">
+                <End Type="q_perior.infothek_db.db.service.infothek.CustomersType" Role="CustomersPrincipal" Multiplicity="1"/>
+                <End Type="q_perior.infothek_db.db.service.infothek.ProjectsType" Role="ProjectsDependent" Multiplicity="*"/>
+            </Association>
+            <EntityContainer Name="infothek" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="Technologies" EntityType="q_perior.infothek_db.db.service.infothek.TechnologiesType"/>
+                <EntitySet Name="Customers" EntityType="q_perior.infothek_db.db.service.infothek.CustomersType"/>
+                <EntitySet Name="Projects" EntityType="q_perior.infothek_db.db.service.infothek.ProjectsType"/>
+                <AssociationSet Name="CustomerProjects" Association="q_perior.infothek_db.db.service.infothek.CustomerProjectsType">
+                    <End Role="CustomersPrincipal" EntitySet="Customers"/>
+                    <End Role="ProjectsDependent" EntitySet="Projects"/>
+                </AssociationSet>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

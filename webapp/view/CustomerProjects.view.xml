@@ -1,0 +1,121 @@
+<mvc:View controllerName="qperior.infothek.Q_Infothek_Projects.controller.CustomerProjects" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:t="sap.ui.table" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns:c="sap.ui.commons">
+	<App id="idAppControl">
+		<Page title="{i18n>title}">
+			<content>
+				<l:Splitter>
+					<List id="mainListID" items="{ path: '/Customers', parameters: { expand: 'Projects' } }" showSeparators="None"
+						class="sapUiResponsiveContentPadding">
+						<items>
+							<CustomListItem>
+								<Panel expand="showFAQ" expandable="true" expanded="false" headerText="{CUST_NAME}">
+									<content>
+										<t:Table id="table" selectionMode="None" rows="{Projects}" enableCellFilter="{ui>/cellFilterOn}">
+											<t:columns>
+												<t:Column width="4rem">
+													<Text/>
+													<t:template>
+														<Button icon="sap-icon://detail-view"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11rem">
+													<Text text="Project ID"/>
+													<t:template>
+														<Input value="{PROJ_ID}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+												<t:Column width="11rem">
+													<Text text="User Name"/>
+													<t:template>
+														<Input value="{USER_NAME}" valueLiveUpdate="true"/>
+													</t:template>
+												</t:Column>
+											</t:columns>
+										</t:Table>
+									</content>
+								</Panel>
+							</CustomListItem>
+						</items>
+						<layoutData><l:SplitterLayoutData size="60%"/></layoutData>
+					</List>
+					<VBox >
+						<Button id="resizeButton" icon="sap-icon://expand" text="{i18n>increase}" press="expandDetailView"/>
+						<Panel class="sapUiResponsiveMargin sapUiHideOnPhone" width="auto" headerText="{i18n>offer}">
+							<f:SimpleForm id="simpleForm1" layout="ResponsiveGridLayout" maxContainerCols="2" editable="true" labelSpanXL="2" labelSpanL="2"
+								labelSpanM="2" labelSpanS="4" emptySpanL="0" emptySpanM="0" emptySpanXL="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1">
+								<f:content>
+									<Label text="{i18n>customer}"/>
+									<Input value="{USER_NAME}"/>
+									<Label text="{i18n>projectName}"/>
+									<Input value="{PROJ_TOPIC}"/>
+									<Label text="{i18n>status}"/>
+									<Input value="{STATUS}"/>
+								</f:content>
+							</f:SimpleForm>
+						</Panel>
+						<Panel class="sapUiResponsiveMargin sapUiHideOnPhone" width="auto" headerText="{i18n>details}">
+							<f:SimpleForm id="simpleForm2" layout="ResponsiveGridLayout" maxContainerCols="2" editable="true" labelSpanXL="2" labelSpanL="2"
+								labelSpanM="2" labelSpanS="4" emptySpanL="0" emptySpanM="0" emptySpanXL="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1">
+								<f:content>
+									<Label text="{i18n>customer}"/>
+									<Input value="{USER_NAME}"/>
+									<Label text="{i18n>projectName}"/>
+									<Input value="{PROJ_TOPIC}"/>
+									<Label text="{i18n>status}"/>
+									<Input value="{STATUS}"/>
+								</f:content>
+							</f:SimpleForm>
+						</Panel>
+						<Panel class="sapUiResponsiveMargin sapUiHideOnPhone" width="auto" headerText="{i18n>internal}">
+							<f:SimpleForm id="simpleForm3" layout="ResponsiveGridLayout" maxContainerCols="2" editable="true" labelSpanXL="2" labelSpanL="2"
+								labelSpanM="2" labelSpanS="4" emptySpanL="0" emptySpanM="0" emptySpanXL="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1">
+								<f:content>
+									<Label text="{i18n>customer}"/>
+									<Input value="{USER_NAME}"/>
+									<Label text="{i18n>projectName}"/>
+									<Input value="{PROJ_TOPIC}"/>
+									<Label text="{i18n>status}"/>
+									<Input value="{STATUS}"/>
+								</f:content>
+							</f:SimpleForm>
+						</Panel>
+						<Panel class="sapUiResponsiveMargin sapUiHideOnPhone" width="auto" headerText="{i18n>project}">
+							<f:SimpleForm id="simpleForm4" layout="ResponsiveGridLayout" maxContainerCols="2" editable="true" labelSpanXL="2" labelSpanL="2"
+								labelSpanM="2" labelSpanS="4" emptySpanL="0" emptySpanM="0" emptySpanXL="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1">
+								<f:content>
+									<Label text="{i18n>customer}"/>
+									<Input value="{USER_NAME}"/>
+									<Label text="{i18n>projectName}"/>
+									<Input value="{PROJ_TOPIC}"/>
+									<Label text="{i18n>status}"/>
+									<Input value="{STATUS}"/>
+								</f:content>
+							</f:SimpleForm>
+						</Panel>
+						<Panel class="sapUiResponsiveMargin sapUiHideOnPhone" width="auto" headerText="{i18n>mapTitle}">
+							<Image id="simpleForm6" height="50%" width="50%" src="{ parts: [ 'PR_STREET', 'PR_PINCODE', 'PR_CITY', 'PROJ_COUNTRY' ], formatter: '.formatter.formatMapUrl' }"/>
+						</Panel>
+						<Panel class="sapUiResponsiveMargin sapUiHideOnPhone" width="auto" headerText="Panel">
+							<Image src="https://memegenerator.net/img/instances/58306183/much-sap-very-performance-so-wow-no-go-live-march.jpg" width="400px"
+								height="400px" alt="Example picture of speakers"/>
+						</Panel>
+						<layoutData><l:SplitterLayoutData size="auto"/></layoutData>
+					</VBox>
+					<!--funktioniert-->
+					<!--<Carousel class="sapUiContentPadding" loop="true">
+						<pages>
+							<Image src="https://memegenerator.net/img/instances/58306183/much-sap-very-performance-so-wow-no-go-live-march.jpg" width="auto" height="auto" alt="Example picture of speakers"/>
+							<Image src="https://memegenerator.net/img/instances/58306183/much-sap-very-performance-so-wow-no-go-live-march.jpg" width="auto" height="auto" alt="Example picture of USB flash drive"/>
+						</pages>
+						<layoutData><l:SplitterLayoutData size="auto"/></layoutData>
+					</Carousel>-->
+					<!--funktioniert-->
+					<!--<Button text="Content 2">
+						<layoutData><l:SplitterLayoutData size="auto"/></layoutData>
+					</Button>-->
+				</l:Splitter>
+			</content>
+		</Page>
+	</App>
+</mvc:View>
