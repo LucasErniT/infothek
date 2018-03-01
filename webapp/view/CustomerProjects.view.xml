@@ -12,13 +12,6 @@
 								<Panel expand="showFAQ" expandable="true" expanded="false" headerText="{CUST_NAME}">
 									<content>
 										<t:Table id="table" enableBusyIndicator="true" selectionMode="None" rows="{Projects}" enableCellFilter="{ui>/cellFilterOn}">
-											<t:columns>
-												<t:Column width="4rem">
-													<Text/>
-													<t:template>
-														<Button icon="sap-icon://detail-view"/>
-													</t:template>
-												</t:Column>
 												<t:Column width="11rem">
 													<Text text="Project ID"/>
 													<t:template>
